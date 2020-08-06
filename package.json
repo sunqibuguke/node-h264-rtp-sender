@@ -1,0 +1,42 @@
+{
+  "name": "node-h264-rtp-sender",
+  "version": "0.1.0",
+  "author": "Sunqi",
+  "scripts": {
+    "build-ts": "tsc",
+    "debug": "npm run build && npm run watch-debug",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+    "serve": "node dist/index.js",
+    "serve-debug": "nodemon --inspect dist/index.js",
+    "start": "npm run serve",
+    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\"",
+    "watch-node": "nodemon dist/index.js",
+    "watch-ts": "tsc -w"
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "bcrypt-nodejs": "^0.0.3",
+    "bluebird": "^3.5.5"
+  },
+  "devDependencies": {
+    "@types/async": "^3.0.2",
+    "@types/eslint": "^6.1.1",
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.7.8",
+    "@types/supertest": "^2.0.8",
+    "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "chai": "^4.2.0",
+    "concurrently": "^5.0.0",
+    "eslint": "^6.4.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2",
+    "shelljs": "^0.8.3",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  }
+}
