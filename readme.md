@@ -1,12 +1,13 @@
 # H264 RTP Sender
 
 
-node.js H264 RTP 分包工具
+node.js H264 RTP 分包工具，从性能上说 node 并不适合做这个工作，但是可以作测试工具只用。
 
 分包类型：
 
-- 单个NAL 包
+- 单个 NAL 包
 - FU-A 分片
 
 ### TODO
-增加STAP-A 聚合封包，适用于发送SPS PPS 
+
+- 增加 STAP-A 聚合封包，适用于发送SPS PPS 
